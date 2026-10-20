@@ -2,7 +2,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Humedad extends Sensor {
     public Humedad(String nombre, int periodo, int min, int max){
-        super(nombre, "%", periodo, min, max);
+        super(nombre, "Hr", periodo, min, max);
     }
 
     @Override

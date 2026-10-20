@@ -32,7 +32,7 @@ public abstract class Sensor implements Runnable {
     public void run(){
         DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");
 
-        while(!Thread.currentThread().isInterrupted()){
+        while(!Thread.currentThread().isInterrupted() && this.numero_lecturas < 5){
             try {
                 double valor = medir();
                 this.numero_lecturas++;
