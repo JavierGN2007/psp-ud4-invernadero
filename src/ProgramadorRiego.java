@@ -2,14 +2,14 @@ public class ProgramadorRiego extends Thread {
     int ciclos;
     double litrosTotales;
 
-    public ProgramadorRiego(){
+    public ProgramadorRiego(int ciclos){
         super("riego");
-        this.ciclos = 0;
+        this.ciclos = ciclos;
         this.litrosTotales = 0;
     }
 
     public void run(){
-        for(int i = 5; i>=1; i--){
+        for(int i = this.ciclos; i>=1; i--){
             this.ciclos = i;
             this.litrosTotales = this.litrosTotales + 2.5;
             System.out.println("[" + getName() + "] Ciclo " + i + ": ABIERTA (Suma 2.5L)");

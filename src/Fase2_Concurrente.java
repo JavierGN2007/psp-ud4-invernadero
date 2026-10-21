@@ -3,7 +3,7 @@ public class Fase2_Concurrente {
         Temperatura t2 = new Temperatura("Temperatura", 2000, 10, 40);
         Humedad h2 = new Humedad("Humedad", 2000, 20, 90);
         Luz l2 = new Luz("Luz", 2000, 0, 1000);
-        ProgramadorRiego r2 = new ProgramadorRiego();
+        ProgramadorRiego r2 = new ProgramadorRiego(3);
 
         Thread hiloTemperatura = new Thread(t2);
         Thread hiloHumedad = new Thread(h2);
